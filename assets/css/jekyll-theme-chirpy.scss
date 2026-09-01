@@ -47,15 +47,15 @@ html[data-bs-theme='light'] {
   --menu-bg: #fffdfb;
   --menu-highlight-bg: rgb(196 92 74 / 8%);
 
-  --site-title-color: #f7f3ee;
-  --site-subtitle-color: #d5ddd9;
-  --sidebar-bg: #1a4240;
-  --sidebar-border-color: #163635;
-  --sidebar-muted-color: #d5ddd9;
-  --sidebar-active-color: #e08a74;
-  --sidebar-hover-bg: rgb(224 138 116 / 16%);
-  --sidebar-btn-bg: #143634;
-  --sidebar-btn-color: #f7f3ee;
+  --site-title-color: #031812;
+  --site-subtitle-color: #1a4a30;
+  --sidebar-bg: #d8f0e4;
+  --sidebar-border-color: #b7d6c4;
+  --sidebar-muted-color: #f7fff8;
+  --sidebar-active-color: #fff6f1;
+  --sidebar-hover-bg: rgb(255 255 255 / 18%);
+  --sidebar-btn-bg: rgb(255 255 255 / 12%);
+  --sidebar-btn-color: #f7fff8;
   --avatar-border-color: #e08a74;
 
   --topbar-bg: rgb(247 243 238 / 82%);
@@ -111,15 +111,15 @@ html[data-bs-theme='dark'] {
   --menu-bg: #182422;
   --menu-highlight-bg: rgb(224 138 116 / 12%);
 
-  --site-title-color: #f7f3ee;
-  --site-subtitle-color: #d5ddd9;
-  --sidebar-bg: #122f2d;
-  --sidebar-border-color: #0d2422;
-  --sidebar-muted-color: #d5ddd9;
-  --sidebar-active-color: #e08a74;
-  --sidebar-hover-bg: rgb(224 138 116 / 16%);
-  --sidebar-btn-bg: #0f2826;
-  --sidebar-btn-color: #f7f3ee;
+  --site-title-color: #031812;
+  --site-subtitle-color: #1a4a30;
+  --sidebar-bg: #d8f0e4;
+  --sidebar-border-color: #0a2e28;
+  --sidebar-muted-color: #f7fff8;
+  --sidebar-active-color: #fff6f1;
+  --sidebar-hover-bg: rgb(255 255 255 / 16%);
+  --sidebar-btn-bg: rgb(255 255 255 / 10%);
+  --sidebar-btn-color: #f7fff8;
   --avatar-border-color: #e08a74;
 
   --topbar-bg: rgb(18 28 27 / 78%);
@@ -167,14 +167,27 @@ h6,
 }
 
 #sidebar {
-  background:
-    linear-gradient(180deg, #1f4d4a 0%, #1a4240 42%, #143634 100%) !important;
+  /* Mint at the top through celadon, pistachio, avocado, jade,
+     olive, forest, emerald, pine, and evergreen at the bottom. */
+  background: linear-gradient(
+    180deg,
+    #d8f0e4 0%,
+    #b7d6c4 11%,
+    #9dcb6e 22%,
+    #6f8f3c 36%,
+    #2a8f68 50%,
+    #5a6328 63%,
+    #1a4a30 75%,
+    #0d3f32 85%,
+    #0a2e28 93%,
+    #031812 100%
+  ) !important;
 
   .site-title {
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #f7f3ee;
+    color: #031812;
   }
 
   .site-subtitle {
@@ -183,7 +196,18 @@ h6,
 
   .nav-link {
     border-radius: 8px;
-    color: #f7f3ee;
+    color: #f7fff8;
+    text-shadow: 0 1px 2px rgb(3 24 18 / 35%);
+  }
+
+  .nav-item.active .nav-link {
+    color: #fff6f1;
+    background-color: rgb(3 24 18 / 22%);
+  }
+
+  .sidebar-bottom a,
+  .sidebar-bottom .btn {
+    color: #f7fff8;
   }
 }
 
