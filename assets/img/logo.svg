@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Ritika Singh</title>
+  <circle cx="56" cy="56" r="56" fill="#1A4240"/>
+  <circle cx="56" cy="56" r="51" fill="none" stroke="#E08A74" stroke-width="2.5"/>
+  <text
+    x="56"
+    y="70"
+    text-anchor="middle"
+    fill="#F7F3EE"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="42"
+    font-weight="600"
+  >RS</text>
+</svg>
