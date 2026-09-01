@@ -1,0 +1,208 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}',
+  $font-family-base: ('Source Sans 3', 'Segoe UI', system-ui, sans-serif),
+  $font-family-heading: (Newsreader, Georgia, 'Times New Roman', serif)
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Soft journal palette: off-white paper, coral accents, deep teal ink.
+   Colors are tuned for WCAG AA contrast on body text and links. */
+html[data-bs-theme='light'] {
+  --mn-paper: #f7f3ee;
+  --mn-paper-deep: #efe8e0;
+  --mn-ink: #2a2f2e;
+  --mn-ink-soft: #4d5755;
+  --mn-teal: #1a4240;
+  --mn-coral: #a84436;
+  --mn-coral-soft: #c45c4a;
+  --mn-focus: #1a4240;
+
+  --main-bg: var(--mn-paper);
+  --mask-bg: #c9c0b6;
+  --main-border-color: #eadfd4;
+  --text-color: var(--mn-ink);
+  --text-muted-color: var(--mn-ink-soft);
+  --heading-color: var(--mn-teal);
+  --label-color: #3f4a48;
+  --blockquote-border-color: #e4cfc4;
+  --blockquote-text-color: var(--mn-ink-soft);
+  --link-color: var(--mn-coral);
+  --link-underline-color: #e8c4b8;
+  --button-bg: #fffdfb;
+  --btn-border-color: #e4d7cc;
+  --btn-backtotop-color: var(--mn-teal);
+  --btn-backtotop-border-color: #eadfd4;
+  --checkbox-checked-color: var(--mn-coral);
+  --menu-bg: #fffdfb;
+  --menu-highlight-bg: rgb(196 92 74 / 8%);
+
+  --site-title-color: var(--mn-teal);
+  --site-subtitle-color: var(--mn-ink-soft);
+  --sidebar-bg: var(--mn-paper-deep);
+  --sidebar-border-color: #e4d7cc;
+  --sidebar-muted-color: #4a5553;
+  --sidebar-active-color: var(--mn-coral);
+  --sidebar-hover-bg: rgb(196 92 74 / 12%);
+  --sidebar-btn-bg: #fffdfb;
+  --sidebar-btn-color: var(--mn-teal);
+  --avatar-border-color: #f3d4cc;
+
+  --topbar-bg: rgb(247 243 238 / 82%);
+  --topbar-text-color: var(--mn-teal);
+  --search-border-color: #e4d7cc;
+  --search-icon-color: #8a7d74;
+  --input-focus-border-color: var(--mn-coral);
+
+  --post-list-text-color: var(--mn-ink-soft);
+  --btn-patinator-text-color: var(--mn-teal);
+  --btn-paginator-hover-color: var(--mn-paper-deep);
+
+  --toc-highlight: var(--mn-coral);
+  --card-bg: #fffdfb;
+  --card-hover-bg: #f3e8e1;
+  --card-shadow: rgb(26 66 64 / 6%) 0 2px 8px 0, rgb(168 68 54 / 10%) 0 0 0 1px;
+  --tb-odd-bg: #faf6f1;
+  --tb-border-color: #eadfd4;
+  --tag-border: #e4d7cc;
+  --tag-hover: #f3d4cc;
+  --search-tag-bg: #fffdfb;
+  --categories-icon-hover-color: var(--mn-teal);
+  --timeline-node-bg: #c9b6ad;
+  --highlight-bg-color: #f3eee8;
+  --inline-code-bg: rgb(26 66 64 / 6%);
+}
+
+html[data-bs-theme='dark'] {
+  --mn-paper: #121c1b;
+  --mn-paper-deep: #0f1817;
+  --mn-ink: #e6e0d8;
+  --mn-ink-soft: #b8b2aa;
+  --mn-teal: #9fd0cb;
+  --mn-coral: #e08a74;
+  --mn-coral-soft: #f0a894;
+  --mn-focus: #e08a74;
+
+  --main-bg: var(--mn-paper);
+  --mask-bg: #31403e;
+  --main-border-color: #243230;
+  --text-color: var(--mn-ink);
+  --text-muted-color: var(--mn-ink-soft);
+  --heading-color: #f3eee7;
+  --label-color: #c9c3bb;
+  --blockquote-border-color: #3a4d4a;
+  --blockquote-text-color: var(--mn-ink-soft);
+  --link-color: var(--mn-coral);
+  --link-underline-color: #7a4a3d;
+  --button-bg: #182422;
+  --btn-border-color: #2c3c3a;
+  --btn-backtotop-color: var(--mn-ink);
+  --checkbox-checked-color: var(--mn-coral);
+  --menu-bg: #182422;
+  --menu-highlight-bg: rgb(224 138 116 / 12%);
+
+  --site-title-color: #f3eee7;
+  --site-subtitle-color: var(--mn-ink-soft);
+  --sidebar-bg: var(--mn-paper-deep);
+  --sidebar-border-color: #243230;
+  --sidebar-muted-color: #b8b2aa;
+  --sidebar-active-color: var(--mn-coral);
+  --sidebar-hover-bg: rgb(224 138 116 / 12%);
+  --sidebar-btn-bg: #182422;
+  --sidebar-btn-color: var(--mn-teal);
+  --avatar-border-color: #7a4a3d;
+
+  --topbar-bg: rgb(18 28 27 / 78%);
+  --topbar-text-color: var(--mn-ink);
+  --search-border-color: #2c3c3a;
+  --search-icon-color: #8a9a97;
+  --input-focus-border-color: var(--mn-coral);
+
+  --post-list-text-color: var(--mn-ink);
+  --btn-paginator-hover-color: #1c2a28;
+  --toc-highlight: var(--mn-coral);
+  --card-bg: #182422;
+  --card-hover-bg: #243230;
+  --card-shadow: rgb(0 0 0 / 36%) 0 6px 18px 0, rgb(224 138 116 / 16%) 0 0 0 1px;
+  --tb-odd-bg: #182422;
+  --tag-border: #3a4d4a;
+  --tag-hover: #3a2a26;
+  --search-tag-bg: #182422;
+  --categories-icon-hover-color: var(--mn-coral);
+  --timeline-node-bg: #7a8a87;
+  --highlight-bg-color: #0f1817;
+  --inline-code-bg: rgb(255 255 255 / 6%);
+}
+
+body {
+  font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#sidebar .site-title,
+.post-title,
+.page-title,
+.content h1,
+.content h2,
+.content h3 {
+  font-family: Newsreader, Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+#sidebar {
+  .site-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+  }
+
+  .site-subtitle {
+    font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+    font-style: italic;
+    max-width: 16rem;
+  }
+
+  .nav-link {
+    border-radius: 8px;
+  }
+}
+
+#avatar img {
+  object-fit: cover;
+}
+
+/* Keep keyboard focus visible for accessibility. */
+:focus-visible {
+  outline: 2px solid var(--mn-focus, #1a4240);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
