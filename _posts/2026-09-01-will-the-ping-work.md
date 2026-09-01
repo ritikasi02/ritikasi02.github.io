@@ -7,9 +7,7 @@ tags: [vlans, switching, trunks]
 
 We will start with something basic, but **fun**.
 
-Tell me this, what will happen in the following scenarios? Think, then look at the solution.
-
-We will work with this topology for all the questions in this post.
+We will work with this topology for all the scenarios in this post.
 
 ![Two switches connected by a trunk. HostA is in VLAN 10 on SW1. HostB is in VLAN 20 on SW2.](/assets/img/posts/will-the-ping-work/topology-trunk.png)
 
@@ -73,4 +71,6 @@ In the below topology, the link between SW1 and SW2 is a trunk with native VLAN 
 
 ![Trunk between SW1 and SW2 with mismatched native VLANs](/assets/img/posts/will-the-ping-work/topology-native-mismatch.png)
 
-**Answer:** Nope. Why?
+**Answer:** Nope. Why? While this would actually work in plain 802.1Q by silently bridging the VLANs (and leaking traffic across), Cisco actively restricts this behaviour and blocks affected VLANs (`*PVID_Inc`) as a fail-safe.
+
+![Cisco switch showing VLANs blocked with PVID_Inc after a native VLAN mismatch](/assets/img/posts/will-the-ping-work/pvid-inc.png)
