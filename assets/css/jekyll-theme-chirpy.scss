@@ -47,14 +47,14 @@ html[data-bs-theme='light'] {
   --menu-bg: #fffdfb;
   --menu-highlight-bg: rgb(196 92 74 / 8%);
 
-  --site-title-color: #031812;
-  --site-subtitle-color: #1a4a30;
-  --sidebar-bg: #d8f0e4;
-  --sidebar-border-color: #b7d6c4;
+  --site-title-color: #f7fff8;
+  --site-subtitle-color: #d5ddd9;
+  --sidebar-bg: #3d5c32;
+  --sidebar-border-color: #1a4a30;
   --sidebar-muted-color: #f7fff8;
   --sidebar-active-color: #fff6f1;
-  --sidebar-hover-bg: rgb(255 255 255 / 18%);
-  --sidebar-btn-bg: rgb(255 255 255 / 12%);
+  --sidebar-hover-bg: rgb(255 255 255 / 14%);
+  --sidebar-btn-bg: rgb(255 255 255 / 10%);
   --sidebar-btn-color: #f7fff8;
   --avatar-border-color: #e08a74;
 
@@ -111,14 +111,14 @@ html[data-bs-theme='dark'] {
   --menu-bg: #182422;
   --menu-highlight-bg: rgb(224 138 116 / 12%);
 
-  --site-title-color: #031812;
-  --site-subtitle-color: #1a4a30;
-  --sidebar-bg: #d8f0e4;
+  --site-title-color: #f7fff8;
+  --site-subtitle-color: #d5ddd9;
+  --sidebar-bg: #2a4a2e;
   --sidebar-border-color: #0a2e28;
   --sidebar-muted-color: #f7fff8;
   --sidebar-active-color: #fff6f1;
-  --sidebar-hover-bg: rgb(255 255 255 / 16%);
-  --sidebar-btn-bg: rgb(255 255 255 / 10%);
+  --sidebar-hover-bg: rgb(255 255 255 / 12%);
+  --sidebar-btn-bg: rgb(255 255 255 / 8%);
   --sidebar-btn-color: #f7fff8;
   --avatar-border-color: #e08a74;
 
@@ -167,19 +167,15 @@ h6,
 }
 
 #sidebar {
-  /* Mint at the top through celadon, pistachio, avocado, jade,
-     olive, forest, emerald, pine, and evergreen at the bottom. */
+  /* Darker ombre: olive at the top through forest, emerald,
+     pine, and evergreen at the bottom. */
   background: linear-gradient(
     180deg,
-    #d8f0e4 0%,
-    #b7d6c4 11%,
-    #9dcb6e 22%,
-    #6f8f3c 36%,
-    #2a8f68 50%,
-    #5a6328 63%,
-    #1a4a30 75%,
-    #0d3f32 85%,
-    #0a2e28 93%,
+    #3d5c32 0%,
+    #2a4a2e 22%,
+    #1a4a30 45%,
+    #0d3f32 68%,
+    #0a2e28 86%,
     #031812 100%
   ) !important;
 
@@ -187,7 +183,7 @@ h6,
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #031812;
+    color: #f7fff8;
   }
 
   .site-subtitle {
