@@ -1,7 +1,7 @@
 ---
 title: Not another blog post on APIs!
 date: 2026-09-09 11:05:00 +0530
-categories: [Networking]
+categories: [Networking Automation]
 tags: [rest-api, python, cml, tls]
 ---
 
